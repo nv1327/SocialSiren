@@ -19,6 +19,7 @@ A social distancing tool that alerts the app user whether they're in proximity o
 ## Improvements for the future:
 - Improve the Node.js Schema model to only PATCH/PUT the longitude and latitude rather than the entire user schema.
 - Improve anonymity measures and use further encryption like bcryptjs if needed
+- Ideally, we'd want to decentralize and let each phone communicate/find distances through Bluetooth since at scale doing all of those calculations would be impossible. Calculating people within proximity for thousands of users could very well be optimized but our current model is simply a demo concept and is not meant for any sort of production or testing. Another advantage of Bluetooth would be more accurate distances rather than long. and lat. GPS positions.
 
 
 ### Contributions
