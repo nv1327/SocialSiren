@@ -56,7 +56,7 @@ class BodyWidgetState extends State<BodyWidget> {
     super.initState();
     _getCurrentLocation();
 
-    //making patch requests every 5 seconds
+    //making patch requests every 1 second
     const fiveSeconds = const Duration(seconds: 1); //I can change this to milliseconds: 250 or something
     Timer.periodic(fiveSeconds, (Timer t) => _makePatchRequest());
     Timer.periodic(fiveSeconds, (Timer t) => _makeGetRequest());
@@ -70,7 +70,6 @@ class BodyWidgetState extends State<BodyWidget> {
       child: Align(
         alignment: Alignment.topCenter,
         child: SizedBox(
-          //width: 200,
           child: Column(
             crossAxisAlignment: CrossAxisAlignment.center,
             children: <Widget>[
@@ -78,7 +77,6 @@ class BodyWidgetState extends State<BodyWidget> {
                 ToggleSwitch(
                   minWidth: 90.0,
                   initialLabelIndex: 2,
-                  //activeBgColor: Colors.redAccent,
                   activeTextColor: Colors.white,
                   inactiveBgColor: Colors.grey,
                   inactiveTextColor: Colors.grey[900],
@@ -86,7 +84,6 @@ class BodyWidgetState extends State<BodyWidget> {
                   labels: ['Sick', 'Healthy'],
                   icons: [Icons.warning, Icons.check],
                   onToggle: (index) {
-                    //print('switched to: $index');
                     var sicklist = ["yes", "no"];
                     sickindicator = sicklist[index];
                   },
@@ -94,13 +91,6 @@ class BodyWidgetState extends State<BodyWidget> {
                 ),
               ]),
 
-              /*
-              Padding(
-                padding: const EdgeInsets.all(8.0),
-                child: Text(
-                    'ID: $uidata \n Lat: $uidatalat \n Long: $uidatalong \n Sick Status: $uidatasick'),
-              ),
-              */
 
               Padding(padding: EdgeInsets.only(top: 50)),
               Text(diagnostic, style: TextStyle(color: _colorFunc(), fontWeight: FontWeight.bold, fontSize: 30)),
