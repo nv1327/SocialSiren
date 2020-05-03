@@ -1,5 +1,5 @@
 # SocialSiren
-A social distancing tool that alerts the app user whether they're in proximity of a sick person. Created using geolocation in Flutter, which livestreams GPS data to a Node.js server that uploads to MongoDB Atlas. It is a powerful application because it has the ability to instantly go cross-platform and everything is stored/backed up in the cloud.
+A social distancing tool that alerts the app user when they're in proximity of a sick person. Created using geolocation in Flutter, which livestreams GPS data to a Node.js server that uploads to MongoDB Atlas. It is a powerful application because it has the ability to instantly go cross-platform and everything is stored/backed up in the cloud.
 
 Made for DistanceHacks from May 1-3, 2020 with no prior knowledge of REST APIs. My first virtual hackathon!
 
