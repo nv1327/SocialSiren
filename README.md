@@ -16,7 +16,7 @@ Made for DistanceHacks from May 1-3, 2020 with no prior knowledge of REST APIs. 
 ## Applications:
 - To improve social distancing measures
 - Provide awareness for disease spread
-- User IDs are kept completely anonymous to prevent doxing/ostracision
+- User IDs are kept completely anonymous to prevent doxing/ostracision and no names are stored online
 
 
 ## Improvements For The Future:
@@ -30,12 +30,15 @@ Made for DistanceHacks from May 1-3, 2020 with no prior knowledge of REST APIs. 
 ## How To Use:
 - Install Flutter and all of the necessary packages for it ("pub get" the things I have in my pubspec.yaml).
 - Install Node.js and all of the necessary packages for it including npm (also check my package.json for npm packages to install)
-- Create a MongoDB Atlas account and put the connection url in the app.js file in the server folder. Substitute it for "process.env.DB_CONNECT."
+- Create a MongoDB Atlas account and put the connection url in the index.js file in the server folder. Substitute it for "process.env.DB_CONNECT."
 - Run the server and confirm it works by sending a GET request to "localhost:7000/api/"
 - Then run both iOS and Android emulators in Android Studio or a platform of your choosing (You need a MacBook to run both on the same machine).
 - Make sure their coordinates are kind of close, and try out the "Sick" and "Healthy" tabs. It should display a warning on the other person's phone if they're near a sick person.
 - If you can, please fix my way of PATCH, GET, and calling functions every 1 second. I don't like the latency but that also might just be because I have a server and two emulators running on my local machine.
 - Also, please make my server more efficient if possible, and break up that big Dart file I have for my frontend.
+
+## Thoughts:
+- To be quite honest, Firebase would have been much easier to implement in this case since all I would need to do is to drag and drop a .json file in and run the emulator once. Plus they already livestream their data and it's optimized for my type of project. However, that's not the point. It's about learning and it's about the challenge of constructing your own custom REST API in a limited time frame. Using Firebase won't help you build your own full-scale web/mobile app in the future, so why use it now? I also wanted to use MongoDB Atlas because it's pretty awesome and they were offering a prize for it.
 
 ### Contributions
 - Flutter: nv1327
