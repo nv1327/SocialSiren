@@ -20,7 +20,7 @@ Made for DistanceHacks from May 1-3, 2020 with no prior knowledge of REST APIs. 
 
 
 ## Improvements For The Future:
-- There is a lot of latency, especially for two apps. One of the major improvements we could make would be to only give the phone a warning when somebody is in proximity - in other words, they shouldn't be GET requesting the server every second, they should only be receiving data as a query when the server calculates a warning necessary. Server-side processing and the elimination of the "live-stream" aspect would help a lot, but it would be more complicated to implement and that's not the point of a hackathon in my opinion.
+- There is a lot of latency, especially for just two user apps. One of the major improvements we could make would be to only give the phone a warning when somebody is in proximity - in other words, they shouldn't be GET requesting the server every second, they should only be receiving data as a query when the server calculates a warning necessary. Server-side processing and the elimination of the "live-stream" aspect would help a lot, but it would be more complicated to implement and that's not the point of a hackathon in my opinion.
 - Put the Node.js server on a DigitalOcean Droplet and give it more RAM/CPU. Also increase RAM/CPU for my MongoDB cluster.
 - Improve the Node.js Schema model to only PATCH/PUT the longitude and latitude rather than the entire user schema.
 - Improve anonymity measures and use further encryption like bcryptjs if needed
