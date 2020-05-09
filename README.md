@@ -32,6 +32,7 @@ Made for DistanceHacks from May 1-3, 2020 with no prior knowledge of REST APIs. 
 
 ## Improvements For The Future:
 - There is a lot of latency, especially for just two user apps. One of the major improvements we could make would be to only give the phone a warning when somebody is in proximity - in other words, they shouldn't be GET requesting the server every second, they should only be receiving data as a query when the server calculates a warning necessary. Server-side processing and the elimination of the "live-stream" aspect would help a lot, but it would be more complicated to implement and that's not the point of a hackathon in my opinion.
+- Use a Redis DB instead of MongoDB. Redis is in-cache while Mongo is in-memory, so Redis is superior in terms of read/write speeds for tasks such as updating location or messaging. For a solution similar to MongoDB Atlas, I could have spun up a Redis cluster on Scalegrid.io.
 - Put the Node.js server on a DigitalOcean Droplet and give it more RAM/CPU. Also increase RAM/CPU for my MongoDB cluster.
 - Use physical emulators with their own processors rather than running two virtual emulators and a server from my computer
 - Improve the Node.js Schema model to only PATCH/PUT the longitude and latitude rather than the entire user schema.
